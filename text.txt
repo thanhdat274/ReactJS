@@ -1,0 +1,4 @@
+- Câu lệnh cài react npm install react-router-dom react-hook-form axios   
+- Câu lệnh cài toastr: npm i --save-dev @types/toastr  
+                       npm i toastr  
+- Cài Navigo: npm i navigo                                                                                                                      

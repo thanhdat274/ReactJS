@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './square.module.css'
 
-const Square = () => {
-    const [status, setStatus] = useState(false);
-  return (
-    <button onClick={()=> setStatus(!status)} className={styles.hop}>
-        {status ? 'X' : null}
+const Square = ({value, handPlay}) => {
+  return (  
+    <button onClick={handPlay} className={styles.hop}>
+      {value}
     </button>
   )
 }
