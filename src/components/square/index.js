@@ -1,10 +1,15 @@
 import React from 'react'
 import styles from './square.module.css'
 
-const Square = ({value, handPlay}) => {
+const Square = (props) => {
+  console.log(props);
+  let bg;
+  if(props.stt[props.abc]===true){
+    bg={background:'green'}
+  }
   return (  
-    <button onClick={handPlay} className={styles.hop}>
-      {value}
+    <button onClick={props.handPlay} className={styles.hop} style={bg}>
+      {props.value}
     </button>
   )
 }

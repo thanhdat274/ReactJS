@@ -9,7 +9,12 @@ function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
   const [XPlay, setXPlay] = useState(true)
   const winner = caculateWiner(board)
-
+  const arr = Array(9).fill(false)
+  if (winner) {
+    arr[winner.mang[0]] = true
+    arr[winner.mang[1]] = true
+    arr[winner.mang[2]] = true
+  }
   const reset = () => {
     setBoard(Array(9).fill(null))
   }
@@ -28,9 +33,9 @@ function App() {
   console.log(board);
   return (
     <Container>
-      {winner ? <h3>Win {winner}</h3> : null}
+      {winner ? <h3>Win {winner.who}</h3> : null}
       <Broad>
-        {board.map((item, index) => <Square value={item} handPlay={() => handPlay(index)} key={index} />)}
+        {board.map((item, index) => <Square  value={item} abc={index} stt={arr} handPlay={() => handPlay(index)} />)}
       </Broad>
       <button onClick={() => reset()}>Reset</button>
     </Container>
@@ -64,7 +69,7 @@ const caculateWiner = (board) => {
   for (let i = 0; i < mang.length; i++) {
     const [a, b, c] = mang[i]
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-      return board[a]
+      return { who: board[a], mang: mang[i] }
     }
   }
   return null
