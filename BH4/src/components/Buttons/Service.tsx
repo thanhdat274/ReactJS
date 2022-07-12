@@ -22,6 +22,7 @@ const ServiceBtn = ({ image, title1, title2 }: Props) => {
 const Container = styled.div`
     display: flex;
     background-color: transparent;
+    margin-left: 20px;
 `
 const Image = styled.img`
     margin-right: 5px;

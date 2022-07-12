@@ -2,6 +2,8 @@ import React from "react";
 import styled from 'styled-components'
 import logoImage from '../../assets/images/logo.png'
 import deliveryImage from '../../assets/images/delivery.svg'
+import mapImage from '../../assets/images/map.svg'
+import cartImage from '../../assets/images/cart.svg'
 import ServiceBtn from "../Buttons/Service";
 import InputSearch from "../Input/Search";
 
@@ -16,11 +18,14 @@ const Header = () => {
                         image={deliveryImage}
                         title1="Gọi mua hàng" title2="1800.2097" />
                     <ServiceBtn
-                        image={deliveryImage}
-                        title1="Gọi mua hàng" title2="1800.2097" />
+                        image={mapImage}
+                        title1="Cửa hàng" title2="gần bạn" />
                     <ServiceBtn
                         image={deliveryImage}
-                        title1="Gọi mua hàng" title2="1800.2097" />
+                        title1="Tra cứu" title2="đơn hàng" />
+                    <ServiceBtn
+                        image={cartImage}
+                        title1="Giỏ" title2="hàng" />
                 </Services>
 
             </Container>
@@ -53,7 +58,7 @@ const Search = styled.input`
 `
 const Services = styled.div`
     display: flex;
-    margin-left: 48px;
+    margin-left: 38px;
 `
 
 const Service = styled.div`
