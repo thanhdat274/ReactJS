@@ -65,4 +65,10 @@ const Service = styled.div`
     display: flex;
 `
 
+const App=() => {
+    const labelText = ['Click me'];
+    return (<div>
+    <label>_____</label>
+    </div>)
+    }
 export default Header
