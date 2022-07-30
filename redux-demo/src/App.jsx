@@ -9,15 +9,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
-  const store = useSelector(store => store)
-  console.log(store);
-  const dispatch = useDispatch()
+  const [products, setProducts] = useState([]);
+  const fetchProduct = async function () {
+    const data = await (
+      await fetch("https://62de615accdf9f7ec2d66ae3.mockapi.io/api/products")
+    ).json();
+    console.log(data);
+    setProducts(data);
+  };
   useEffect(() => {
-    dispatch(GETPRODUCT)
-  }, [])
+    fetchProduct();
+  }, []);
   return (
     <div>
-      <Product product={store.products}/>
+      <Product product={products}/>
       <Cart/>
     </div>
   )

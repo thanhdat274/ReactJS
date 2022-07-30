@@ -1,16 +1,10 @@
 const initialValue = {
-	products: [],
 	cart: [],
 	total: 0
 }
 
 const rootReducer = (state = initialValue, action) => {
 	switch (action.type) {
-		case "product/get":
-			return {
-				...state,
-				products: action.payload
-			}
 		case "cart/add":
 			const newProduct = { ...action.payload };
 			const existProduct = state.cart.find((item) => item.id === newProduct.id);

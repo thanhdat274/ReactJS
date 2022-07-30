@@ -57,7 +57,7 @@ const Cart = () => {
                 </div>
 
                 <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                  <h5 className="mb-0">{item.total} vnđ</h5>
+                  <h5 className="mb-0">{currency(item.total)}</h5>
                 </div>
                 <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                   <button
