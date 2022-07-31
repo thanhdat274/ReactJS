@@ -11,7 +11,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h3 className="mt-4">Cart</h3>
+      <h3 className="mt-4">Giỏ hàng</h3>
       {cart?.map((item) => {
         console.log(item.quantity);
         return (
@@ -38,7 +38,7 @@ const Cart = () => {
                       });
                     }}
                   >
-                    <i className="bi bi-arrow-up-square-fill"></i>
+                  <i class="fa-solid fa-plus"></i>
                   </button>
 
                   <span>{item.quantity}</span>
@@ -52,7 +52,7 @@ const Cart = () => {
                       });
                     }}
                   >
-                    <i className="bi bi-arrow-down-square-fill"></i>
+                  <i class="fa-solid fa-minus"></i>
                   </button>
                 </div>
 
@@ -60,7 +60,7 @@ const Cart = () => {
                   <h5 className="mb-0">{currency(item.total)}</h5>
                 </div>
                 <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                  <button
+                  {/* <button
                     href="#!"
                     className="text-danger"
                     onClick={() => {
@@ -71,7 +71,7 @@ const Cart = () => {
                     }}
                   >
                     <i className="bi bi-trash"></i>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

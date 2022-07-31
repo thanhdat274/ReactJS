@@ -8,8 +8,6 @@ const cartSlice = createSlice({
     },
     reducers: {
         add: (state, action) => {
-            // IMMMER
-            // Mutable => Immutable
             state.cart.push(action.payload)
         },
         increase: (state, action) => {
