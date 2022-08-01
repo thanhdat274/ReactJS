@@ -48,10 +48,17 @@ const rootReducer = (state = initialValue, action) => {
 			const productt = state.cart.find((item) => item.id === productDecreseId);
 
 			productt.quantity -= 1;
-
+			let cart1;
 			productt.total -= productt.saleOffPrice;
-			const cart1 = [...state.cart];
-			
+			if (productt.quantity < 1) {
+				const delePR = state.cart.filter(
+					(item) => item.id !== productDecreseId
+				);
+				cart1 = [...delePR];
+			} else {
+				cart1 = [...state.cart];
+			}
+
 			return {
 				...state,
 				cart: cart1,

@@ -18,15 +18,14 @@ const Product = ({ product }) => {
       <div className="d-flex">
         {product?.map(item => (
           <div
-            className="card mx-2 p-3 d-flex justify-content-center w-25"
+            className="card mx-2 p-3 d-flex w-25"
             key={item.id}
           >
             <div>
               <img
-                className="card-img-top"
                 src={item.image}
                 alt="Card image cap"
-                style={{ width: "120px" }}
+                style={{ width: "90px" }}
               />
             </div>
             <div className="card-body">
